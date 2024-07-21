@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Soufian Spending Tracker</string>
+    <string name="analytics">Analytics</string>
+    <string name="pick_a_new_date">Pick a new date</string>
+    <string name="error_saving_spending">Error, make sure to enter valid spending info.</string>
+    <string name="name">Name</string>
+    <string name="balance">Balance</string>
+    <string name="save">Save</string>
+    <string name="search_image">Search image</string>
+    <string name="add_an_image">Add an image</string>
+    <string name="set_image">Set image</string>
+    <string name="delete_spending">Delete spending</string>
+    <string name="add_a_new_spending">Add a new spending</string>
+    <string name="edite_spending">Edit spending</string>
+    <string name="update_balance">Update balance</string>
+    <string name="save_balance">Save balance</string>
+    <string name="back">Back</string>
+    <string name="enter_balance">Enter balance</string>
+    <string name="price">Price</string>
+    <string name="kilograms">Kilograms</string>
+    <string name="quantity">Quantity</string>
+    <string name="spending_per_day">Spending Per Day:</string>
+    <string name="spending_per_week">Spending Per Week:</string>
+    <string name="no_data_yet">No data yet</string>
+    <string name="you_spent_in_total">You spent $%1$s in total</string>
+</resources>
