@@ -16,6 +16,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
+        maven("https://android-sdk.is.com/")
     }
 }
 

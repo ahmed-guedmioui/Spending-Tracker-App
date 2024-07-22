@@ -1,16 +1,22 @@
 [versions]
+admobadapter = "4.3.34"
 agp = "8.5.1"
 coilCompose = "2.6.0"
+facebookadapter = "4.3.42"
 kotlin = "1.9.24"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 lifecycleRuntimeKtx = "2.8.3"
 activityCompose = "1.9.0"
 composeBom = "2024.06.00"
+mediationsdk = "7.5.1"
 navigationCompose = "2.8.0-beta05"
 kotlinxSerializationJson = "1.6.3"
 koin = "3.5.3"
 okhttp = "4.12.0"
+playServicesAppset = "16.1.0"
+playServicesAdsIdentifier = "18.1.0"
+playServicesBasement = "18.4.0"
 retrofit = "2.9.0"
 converterGson = "2.9.0"
 roomPaging = "2.6.1"
@@ -29,8 +35,14 @@ kotlinxCoroutinesTest = "1.5.1"
 espressoCore = "3.6.1"
 
 [libraries]
+admobadapter = { module = "com.ironsource.adapters:admobadapter", version.ref = "admobadapter" }
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
+facebookadapter = { module = "com.ironsource.adapters:facebookadapter", version.ref = "facebookadapter" }
 junit = { module = "junit:junit", version.ref = "junit" }
+mediationsdk = { module = "com.ironsource.sdk:mediationsdk", version.ref = "mediationsdk" }
+play-services-ads-identifier = { module = "com.google.android.gms:play-services-ads-identifier", version.ref = "playServicesAdsIdentifier" }
+play-services-appset = { module = "com.google.android.gms:play-services-appset", version.ref = "playServicesAppset" }
+play-services-basement = { module = "com.google.android.gms:play-services-basement", version.ref = "playServicesBasement" }
 truth = { module = "com.google.truth:truth", version.ref = "truth" }
 androidx-core = { module = "androidx.test:core", version.ref = "testCore" }
 androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }

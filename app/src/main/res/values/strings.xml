@@ -23,4 +23,5 @@
     <string name="spending_per_week">Spending Per Week:</string>
     <string name="no_data_yet">No data yet</string>
     <string name="you_spent_in_total">You spent $%1$s in total</string>
+    <string name="loading_ad">Loading Ad...</string>
 </resources>

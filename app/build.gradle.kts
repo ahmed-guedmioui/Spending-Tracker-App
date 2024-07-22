@@ -111,6 +111,16 @@ dependencies {
     androidTestImplementation(libs.koin.test.junit4)
     androidTestImplementation(libs.koin.test)
 
+
+    // ironSource SDK
+    implementation (libs.mediationsdk)
+    implementation (libs.facebookadapter)
+    implementation (libs.admobadapter)
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation (libs.play.services.appset)
+    implementation (libs.play.services.ads.identifier)
+    implementation (libs.play.services.basement)
+
 }
 
 

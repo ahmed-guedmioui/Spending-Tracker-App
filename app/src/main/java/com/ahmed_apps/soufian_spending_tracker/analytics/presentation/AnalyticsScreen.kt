@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -64,13 +65,12 @@ fun AnalyticsScreenCore(
         }
     ) { paddingValues ->
         GradientBackground {
-            if (viewModel.state.pricesPerDay.isNotEmpty()) {
-                AnalyticsScreen(
-                    modifier = Modifier.padding(paddingValues),
-                    state = viewModel.state,
-                    onAction = {}
-                )
-            }
+            AnalyticsScreen(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(paddingValues),
+                state = viewModel.state
+            )
         }
     }
 }
@@ -78,8 +78,7 @@ fun AnalyticsScreenCore(
 @Composable
 private fun AnalyticsScreen(
     modifier: Modifier = Modifier,
-    state: AnalyticsState,
-    onAction: () -> Unit
+    state: AnalyticsState
 ) {
     Column(
         modifier = modifier
