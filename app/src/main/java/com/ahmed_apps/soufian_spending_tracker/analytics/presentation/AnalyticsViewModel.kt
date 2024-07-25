@@ -29,15 +29,24 @@ class AnalyticsViewModel(
     suspend fun getAnalyticsData() {
         state = state.copy(
             usedBalance = spendingDataSource.getUsedBalance(),
-            pricesPerDay = analyticsDataSource.getSpendingByDay()
-                .map { it.price }.takeLast(8),
-            datesPerDay = analyticsDataSource.getSpendingByDay()
-                .map { it.date }.takeLast(8),
+            pricesPerDay = analyticsDataSource.getSpendingByDay().map { it.price }.takeLast(8),
+            datesPerDay = analyticsDataSource.getSpendingByDay().map { it.date }.takeLast(8),
             pricesPerWeek = analyticsDataSource.getSpendingByWeek().map { it.totalSpent }
                 .takeLast(8),
-            datesPerWeek = analyticsDataSource.getSpendingByWeek().map {
-                "${it.weekOfYear}/${it.year}"
-            }.takeLast(8)
+            datesPerWeek = analyticsDataSource.getSpendingByWeek()
+                .map { "${it.weekOfYear}/${it.year}" }.takeLast(8)
+        )
+
+        val shouldShowDaysGraph =
+            state.pricesPerDay.isNotEmpty() && state.datesPerDay.isNotEmpty()
+                    && state.pricesPerDay.size > 1 && state.datesPerDay.size > 1
+        val shouldShowWeeksGraph =
+            state.pricesPerWeek.isNotEmpty() && state.datesPerWeek.isNotEmpty()
+                    && state.pricesPerWeek.size > 1 && state.datesPerWeek.size > 1
+
+        state = state.copy(
+            shouldShowDaysGraph = shouldShowDaysGraph,
+            shouldShowWeeksGraph = shouldShowWeeksGraph
         )
     }
 

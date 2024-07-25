@@ -39,6 +39,8 @@ class SpendingDaoTest : KoinTest {
                 name = "Category $i",
                 imageUrl = "image $i",
                 price = i.toDouble(),
+                kilograms = i.toDouble(),
+                quantity = i.toDouble(),
                 dateTimeUtc = ZonedDateTime.now().toInstant().toString()
             )
 
@@ -57,6 +59,8 @@ class SpendingDaoTest : KoinTest {
             name = "Category",
             imageUrl = "image",
             price = 1.3,
+            kilograms = 1.3,
+            quantity = 1.3,
             dateTimeUtc = ZonedDateTime.now().toInstant().toString()
         )
 
@@ -74,6 +78,8 @@ class SpendingDaoTest : KoinTest {
             name = "Category",
             imageUrl = "image",
             price = 1.3,
+            kilograms = 1.3,
+            quantity = 1.3,
             dateTimeUtc = ZonedDateTime.now().toInstant().toString()
         )
 

@@ -25,8 +25,7 @@ class AnalyticsViewModelTest {
 
     private val spendingDataSource = FakeSpendingDataSource()
     private val analyticsDataSource = AnalyticsDataSourceImpl(spendingDataSource)
-    private val coreDataSource = FakeCoreDataSourceImpl()
-    private val viewModel = AnalyticsViewModel(analyticsDataSource, coreDataSource)
+    private val viewModel = AnalyticsViewModel(analyticsDataSource, spendingDataSource)
 
     @Test
     fun `get graph items, graph items are correct`() = runTest {
@@ -40,15 +39,15 @@ class AnalyticsViewModelTest {
             DailySpending(price = 11.0, date = "2023-7-21")
         )
 
-        Truth.assertThat(viewModel.state.graphItems[0].price).isEqualTo(dailySpendings[0].price)
-        Truth.assertThat(viewModel.state.graphItems[1].price).isEqualTo(dailySpendings[1].price)
-        Truth.assertThat(viewModel.state.graphItems[2].price).isEqualTo(dailySpendings[2].price)
-        Truth.assertThat(viewModel.state.graphItems[3].price).isEqualTo(dailySpendings[3].price)
+        Truth.assertThat(viewModel.state.pricesPerDay[0]).isEqualTo(dailySpendings[0].price)
+        Truth.assertThat(viewModel.state.pricesPerDay[1]).isEqualTo(dailySpendings[1].price)
+        Truth.assertThat(viewModel.state.pricesPerDay[2]).isEqualTo(dailySpendings[2].price)
+        Truth.assertThat(viewModel.state.pricesPerDay[3]).isEqualTo(dailySpendings[3].price)
 
-        Truth.assertThat(viewModel.state.graphItems[0].date).isEqualTo(dailySpendings[0].date)
-        Truth.assertThat(viewModel.state.graphItems[1].date).isEqualTo(dailySpendings[1].date)
-        Truth.assertThat(viewModel.state.graphItems[2].date).isEqualTo(dailySpendings[2].date)
-        Truth.assertThat(viewModel.state.graphItems[3].date).isEqualTo(dailySpendings[3].date)
+        Truth.assertThat(viewModel.state.datesPerDay[0]).isEqualTo(dailySpendings[0].date)
+        Truth.assertThat(viewModel.state.datesPerDay[1]).isEqualTo(dailySpendings[1].date)
+        Truth.assertThat(viewModel.state.datesPerDay[2]).isEqualTo(dailySpendings[2].date)
+        Truth.assertThat(viewModel.state.datesPerDay[3]).isEqualTo(dailySpendings[3].date)
     }
 
 }

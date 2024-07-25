@@ -10,5 +10,7 @@ data class AnalyticsState(
 
     val pricesPerWeek: List<Double> = emptyList(),
     val datesPerWeek: List<String> = emptyList(),
-    val usedBalance: Double = 0.0
+    val usedBalance: Double = 0.0,
+    val shouldShowDaysGraph: Boolean = false,
+    val shouldShowWeeksGraph: Boolean = false,
 )

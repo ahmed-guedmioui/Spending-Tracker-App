@@ -52,7 +52,6 @@ val coreModule = module {
     singleOf(::RoomSpendingDataSource).bind<LocalSpendingDataSource>()
     singleOf(::RetrofitImagesDataSource).bind<RemoteImagesDataSource>()
 
-
 }
 
 

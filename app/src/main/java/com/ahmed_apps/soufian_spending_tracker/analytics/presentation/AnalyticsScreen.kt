@@ -113,7 +113,7 @@ private fun AnalyticsScreen(
                 color = MaterialTheme.colorScheme.primary,
             )
 
-            if (state.pricesPerDay.isNotEmpty() && state.datesPerDay.isNotEmpty()) {
+            if (state.shouldShowDaysGraph) {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -165,7 +165,7 @@ private fun AnalyticsScreen(
                 color = MaterialTheme.colorScheme.primary,
             )
 
-            if (state.pricesPerWeek.isNotEmpty() && state.datesPerWeek.isNotEmpty()) {
+            if (state.shouldShowWeeksGraph) {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
